@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: senalesvip-flow
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn flow_server:app
+    envVars:
+      - key: FLOW_API_KEY
+        sync: false
+      - key: FLOW_SECRET_KEY
+        sync: false
+      - key: FLOW_URL
+        value: https://www.flow.cl/api
