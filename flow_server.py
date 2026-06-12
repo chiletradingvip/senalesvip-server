@@ -23,7 +23,7 @@ GRUPO_ID       = "-1003897570737"
 ARCHIVO        = "suscriptores.json"
 PAGOS_PROC     = "pagos_procesados.json"
 PAGINA_URL     = "https://chiletradingvip.github.io/Senalesvip"
-NGROK_URL      = "https://parole-amazingly-bullpen.ngrok-free.dev"
+NGROK_URL      = "https://senalesvip-server.onrender.com"
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
