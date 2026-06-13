@@ -152,7 +152,7 @@ def iniciar_pago():
         telegram = request.args.get('telegram', '')
         telefono = request.args.get('telefono', '')
         order_id = int(datetime.now().timestamp())
-        url_pago = crear_orden_flow(nombre, email, telegram, telefono, 25000, order_id)
+        url_pago = crear_orden_flow(nombre, email, telegram, telefono, 1000, order_id)
         if url_pago:
             return redirect(url_pago)
         return "Error al crear el pago. Vuelve e intenta nuevamente.", 500
