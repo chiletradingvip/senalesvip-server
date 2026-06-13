@@ -57,8 +57,7 @@ def crear_orden_flow(nombre, email, telegram, telefono, monto, order_id):
         "email":            email,
         "subject":          "Suscripcion VIP Senales BTC XAU Chile",
         "urlConfirmation":  f"{NGROK_URL}/flow/confirmar",
-        "urlReturn":        f"{PAGINA_URL}?pago=exitoso",
-        "notifyUrl":        f"{NGROK_URL}/flow/confirmar",
+        "urlReturn":        "https://chiletradingvip.github.io/Senalesvip?pago=exitoso",
         "optional":         json.dumps({"telegram": telegram, "telefono": telefono, "nombre": nombre})
     }
     params["s"] = firmar_parametros(params)
